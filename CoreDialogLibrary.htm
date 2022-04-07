@@ -1,0 +1,840 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<HTML><HEAD></HEAD>
+<BODY>
+<H1>			DM CORE DIALOG LIBRARY FUNCTIONS
+</H1>
+<P><EM> Last updated on Feb 2, 2001</EM></P>
+<DL>
+</DL>
+<P><STRONG>  ----------------- DIALOG ATTRIBUTE ACCESS FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+</DL>
+<P><STRONG>   Set Property Values
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGSide</STRONG>( TagGroup element, String side )
+<DD>	 Sets the 'Side' attribute: "Left", "Right", "Top", "Bottom", "Center"; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAnchor</STRONG>( TagGroup element, String anchor )
+<DD>	 Sets the 'Anchor' attribute: "North", "South", "East", "West"; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGFill</STRONG>( TagGroup element, String fill )
+<DD>	 Sets the 'Fill' attribute: "X", "Y", "XY", "Both"; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGExpand</STRONG>( TagGroup element, Number do_expand )
+<DD>	 Sets the 'Expand' attribute: 0 for x-direction, 1 for y-direction; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGExpand</STRONG>( TagGroup element, String s )
+<DD>	 Sets the 'Expand' attribute: "X", "Y", "XY"; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGInternalPadding</STRONG>( TagGroup element, number x_pad, number y_pad )
+<DD>	 Sets the 'InternalPadding' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGExternalPadding</STRONG>( TagGroup element, Number x_pad, Number y_pad )
+<DD>	 Sets the 'ExternalPadding' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGValue</STRONG>( TagGroup element, Number value )
+<DD>	 Sets the numeric 'Value' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGValue</STRONG>( TagGroup element, string value )
+<DD>	 Sets the string 'Value' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGValue</STRONG>( object frame, string identifier, number val )
+<DD>	 Sets the numeric 'Value' attribute in a labeled element in a uiframe object;
+	 returns the TagGroup containing the identifier.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGValue</STRONG>( object frame, string identifier, string val )
+<DD>	 Sets the string 'Value' attribute in a labeled element in a uiframe object;
+	 returns the TagGroup containing the identifier.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGMinValue</STRONG>( TagGroup element, Number value )
+<DD>	 Sets the 'MinValue' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGMaxValue</STRONG>( TagGroup element, Number value )
+<DD>	 Sets the 'MaxValue' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGIdentifier</STRONG>( TagGroup element, String id )
+<DD>	 Sets the 'Identifier' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGWidth</STRONG>( TagGroup element, number width )
+<DD>	 Sets the 'Width' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGHeight</STRONG>( TagGroup element, number height )
+<DD>	 Sets the 'Height' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGFont</STRONG>( TagGroup element, string font )
+<DD>	 Sets the 'Font' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGTitle</STRONG>( TagGroup element, string title )
+<DD>	 Sets the 'Title' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGActionMethod</STRONG>( TagGroup element, string action_method )
+<DD>	 Sets the 'ActionMethod' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGChangedMethod</STRONG>( TagGroup element, string changed_method )
+<DD>	 Sets the 'ChangedMethod' attribute; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGMultipleSelect</STRONG>( TagGroup tg, number multiple_select )
+<DD>	 Sets the 'MultipleSelect' attribute for Lists; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGLayout</STRONG>( TagGroup tg, TagGroup layout )
+<DD>	 Sets the 'Layout' attribute for Groups; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGBitmapData</STRONG>( TagGroup tg, Image img )
+<DD>	 Sets the image data for a bitmap
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGInvalid</STRONG>( TagGroup tg, number isInvalid )
+<DD>	 Sets the 'Invalid' attribute for a modified element. Used for run-time update of dialog displays,
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGLabel</STRONG>( TagGroup tg, string label )
+<DD>	 Sets the 'Label' attribute for an element
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>   Get Property Values
+ </STRONG></P>
+<DL>
+<DT>number <STRONG style="COLOR: blue">DLGGetValue</STRONG>( TagGroup tags, number &value )
+<DD>	 Gets the numeric 'Value' attribute setting; returns 1 if succeeded, 0 otherwise.
+
+<DD>&nbsp;  
+<DT>number <STRONG style="COLOR: blue">DLGGetValue</STRONG>( TagGroup tags, string &value )
+<DD>	 Gets the string 'Value' attribute setting; returns 1 if succeeded, 0 otherwise.
+
+<DD>&nbsp;  
+<DT>number <STRONG style="COLOR: blue">DLGGetValue</STRONG>( object frame, string identifier, number &val )
+<DD>	 Gets the numeric 'Value' attribute setting for a labeled element in a 
+	 uiframe object; returns 1 if succeeded, 0 otherwise.
+
+<DD>&nbsp;  
+<DT>number <STRONG style="COLOR: blue">DLGGetValue</STRONG>( object frame, string identifier, string &val )
+<DD>	 Gets the string 'Value' attribute setting for a labeled element identifier in a 
+	 uiframe object; returns 1 if succeeded, 0 otherwise.
+
+<DD>&nbsp;  
+<DT>number <STRONG style="COLOR: blue">DLGGetValue</STRONG>( TagGroup tags )
+<DD>	 Returns the numeric 'Value' attribute setting.
+
+<DD>&nbsp;  
+<DT>string <STRONG style="COLOR: blue">DLGGetStringValue</STRONG>( TagGroup tags )
+<DD>	 Returns the string 'Value' attribute setting.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGGetItems</STRONG>( TagGroup tags )
+<DD>	 Returns the TagGroup in the 'Items' attribute of an element.
+
+<DD>&nbsp;  
+<DT>number <STRONG style="COLOR: blue">DLGGetIdentifier</STRONG>( TagGroup tags, string &identifier )
+<DD>	 Returns the string in the 'Identifier' attribute of an element.
+
+<DD>&nbsp;  
+<DT>number <STRONG style="COLOR: blue">DLGGetNthLabel</STRONG>( TagGroup tags, number index, string &label_str )
+<DD>	 Gets the label of the nth item in the 'Items' TagGroup of an element;
+	 returns 1 if succeeded, 0 otherwise.
+
+<DD>&nbsp;  
+<DT>string <STRONG style="COLOR: blue">DLGGetType</STRONG>( TagGroup tags )
+<DD>	 Gets the type attribute of an element.
+
+<DD>&nbsp;  
+<DT>number <STRONG style="COLOR: blue">DLGGetWidth</STRONG>( TagGroup tags )
+<DD>	 Gets the width of an element
+
+<DD>&nbsp;  
+<DT>number <STRONG style="COLOR: blue">DLGGetHeight</STRONG>( TagGroup tags )
+<DD>	 Gets the height of an element
+
+<DD>&nbsp;  
+<DT>Image <STRONG style="COLOR: blue">DLGGetBitmapData</STRONG>( TagGroup  bitmap )
+<DD>	 Gets the RGB image stored in a bitmap
+
+<DD>&nbsp;  
+<DT>String <STRONG style="COLOR: blue">DLGGetLabel</STRONG>( TagGroup element )
+<DD>	 Gets the label of an element
+
+<DD>&nbsp;  
+<DT>String <STRONG style="COLOR: blue">DLGGetTitle</STRONG>( TagGroup element )
+<DD>	 Gets the label of an element (dialog or label)
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ----------------- DIALOG CONSTRUCTION FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateElement</STRONG>( string type )
+<DD>	 Create a dialog element of the specified type; returns the newly created element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateElementWithItems</STRONG>( string type, TagGroup &items )
+<DD>	 Create a container of the specified type, and passes back an empty items list; returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateElementWithItems</STRONG>( string type)
+<DD>	 Create a container of the specified type
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddElement</STRONG>( TagGroup container, TagGroup element )
+<DD>	 Add an element to a container or element list; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddElement</STRONG>( TagGroup container, TagGroup element, String side )
+<DD>	 Add an element with the specified 'Side' attribute to a container or element list; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddElement</STRONG>( TagGroup container, TagGroup element, String side, String anchor )
+<DD>	 Add an element with the specified 'Side' and 'Anchor' attributes to a container or element list; 
+	 returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddElementBefore</STRONG>( TagGroup container, number index, TagGroup element )
+<DD>	 Insert an element before the given index; returns the element
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddElementAfter</STRONG>( TagGroup container, number index, TagGroup element )
+<DD>	 Insert an element after the given index; returns the element
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGGetElement</STRONG>( TagGroup container, number index )
+<DD>	 Retrieve an element at the given index from a container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGGetElement</STRONG>( TagGroup container, string label, number &index )
+<DD>	 Retrieve an element with the given label; passes back the index of the element
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGGetElement</STRONG>( TagGroup container, string label )
+<DD>	 Retrieve an element with the given label
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGRemoveElement</STRONG>( TagGroup container, number index )
+<DD>	 Remove an element at the given index from a container; returns the removed element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGRemoveLastElement</STRONG>( TagGroup container)
+<DD>	 Remove the last element from a container; returns the removed element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGRemoveElement</STRONG>( TagGroup container, string label )
+<DD>	 Remove an element with the given label; returns the removed element.
+
+<DD>&nbsp;  
+<DT>Number <STRONG style="COLOR: blue">DLGSetElement</STRONG>( TagGroup container, number index, TagGroup new_element )
+<DD>	 Sets the element at the given index; returns 1 if succeeded, 0 otherwise
+
+<DD>&nbsp;  
+<DT>Number <STRONG style="COLOR: blue">DLGSetElement</STRONG>( TagGroup container, string label, TagGroup new_element )
+<DD>	 Sets the element with the given label; returns 1 if succeeded, 0 otherwise
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGSetElementLabel</STRONG>( TagGroup container, number index, string new_label )
+<DD>	 Sets the label of the element at the given index; returns the element
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGSetElementLabel</STRONG>( TagGroup container, string label, string new_label )
+<DD>	 Sets the label of the element with the given label; returns the element
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateDialog</STRONG>( string title, TagGroup &dialog_items )
+<DD>	 Create a dialog container with the given title; passes back an empty items list, and returns the dialog container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateDialog</STRONG>( string title )
+<DD>	 Create a dialog container with the given title
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateTableLayout</STRONG>( number cols, number rows, number uniform )
+<DD>	 Create a table layout with the given number of columns, rows, and whether the table cells 
+	 are uniform in size; returns the table layout.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateTableLayout</STRONG>( number cols, number rows, string uniform )
+<DD>	 Create a table layout with the given number of columns, rows, and whether the table cells 
+	 are uniform in size; returns the table layout.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGTableLayout</STRONG>( TagGroup element, number columns, number rows, number uniform )
+<DD>	 Sets the 'Layout' attribute to a table layout with the given number of columns, rows, 
+	 and cell uniformity flag; returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGTableLayout</STRONG>( TagGroup tg, number columns, number rows, string uniform_str ) 
+<DD>	 Sets the 'Layout' attribute to a table layout with the given number of columns, rows, 
+	 and cell uniformity flag; returns the element.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  Modeless Positioning Utilities
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGBuildPositionFromApplication</STRONG>()
+<DD>	 Creates a dialog position descriptor that uses the bounds of the largest document window as reference;
+	 returns the position descriptor.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGBuildPositionFromWindow</STRONG>( DocumentWindow wnd )
+<DD>	 Creates a dialog position descriptor that uses the bounds of the given window as reference;
+	 returns the position descriptor.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGBuildPositionFromUIFrame</STRONG>( object frame )
+<DD>	 Creates a dialog position descriptor that uses the bounds of the UI frame as reference;
+	 returns the position descriptor.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGBuildAutoSize</STRONG>()
+<DD>	 Creates an auto-size position descriptor; returns the descriptor.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGBuildMatchSize</STRONG>()
+<DD>	 Creates a match-size position descriptor; returns the descriptor.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGBuildAbsoluteSize</STRONG>( number inches )
+<DD>	 Creates an absolute-size position descriptor; returns the descriptor.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGBuildRelativePosition</STRONG>( string sense, number rel )
+<DD>	 Creates a relative-size position descriptor; sense: "Inside", "Outside";
+	 rel: 0, 1; returns the descriptor.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGBuildPosition</STRONG>( number top, number left, number bottom, number right )
+<DD>	 Creates a dialog position descriptor with the given reference bounds;
+	 returns the position descriptor. 
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGPosition</STRONG>( TagGroup tags, TagGroup position )
+<DD>	 Sets the 'Positioning' attribute of a dialog to the given position descriptor;
+	 returns the dialog.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGPosition</STRONG>( TagGroup tags, number top, number left, number bottom, number right )
+<DD>	 Creates a dialog position descriptor with the given reference bounds, and adds it to
+	 the given dialog tags; returns the dialog tags. 
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ----------------- BITMAP FUNCTIONS FOR BEVEL BUTTONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateBitmap</STRONG>( Image img )
+<DD>	 Creates a bitmap TagGroup from the given image.
+
+<DD>&nbsp;  
+<DT>RGBImage <STRONG style="COLOR: blue">DLGMakeRaised</STRONG>( image im )
+<DD>	 Creates an RGBImage with depressed borders from the given image.
+
+<DD>&nbsp;  
+<DT>RGBImage <STRONG style="COLOR: blue">DLGMakeLowered</STRONG>( image im )
+<DD>	 Creates an RGBImage with raised borders from the given image.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ----------------- LABEL FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateLabel</STRONG>( String label_string )
+<DD>	 Creates a label with the given text.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateLabel</STRONG>( string label_string, number width )
+<DD>	 Creates a label with the given text and maximum number of characters.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ----------------- BUTTON FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL> 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePushButton</STRONG>( String 
+    title, String action_method ) 
+  <DD> Creates a single-state text button with the given display title and action 
+    method. 
+  <DD>&nbsp; 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGCreateBevelButton</STRONG>( TagGroup 
+    onBitmap, TagGroup offBitmap, string actionmethod ) 
+  <DD> Creates a single-state bitmap button with the given on/off bitmap TagGroups 
+    and action method. 
+  <DD>&nbsp; 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGCreateBevelButton</STRONG>( Image 
+    onImage, Image offImage, string actionmethod ) 
+  <DD> Creates a single-state bitmap button with the given on/off images and action 
+    method. 
+  <DD>&nbsp; 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGCreateBevelButton</STRONG>( Image 
+    img, string actionmethod ) 
+  <DD> Creates a single-state bitmap button with the given image and action method. 
+  <DD>&nbsp; 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGCreateDualStateBevelButton</STRONG>( 
+    string identifier, TagGroup onBitmap, TagGroup offBitmap, string actionmethod 
+    ) 
+  <DD> Creates a dual-state bitmap button with the given identifier, on/off bitmap 
+    TagGroups, and action method. 
+  <DD>&nbsp; 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGCreateDualStateBevelButton</STRONG>( 
+    string identifier, Image onImage, Image offImage, string actionmethod ) 
+  <DD> Creates a dual-state bitmap button with the given identifier, on/off images, 
+    and action method. 
+  <DD>&nbsp; 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGCreateDualStateBevelButton</STRONG>( 
+    string identifier, Image img, string actionmethod ) 
+  <DD> Creates a dual-state bitmap button with the given identifier, image, and 
+    action method.<br>
+    =&gt; &quot;action method&quot; has to be defined in the <i>class</i> and 
+    be of syntax: <font color="#660000">void actionmethod(<b>object</b> <i>self</i>)</font> 
+  <dt>&nbsp;</dt>
+  <DD>&nbsp; 
+  <DT>Number <STRONG style="COLOR: blue">DLGGetBevelButtonOn</STRONG>( object 
+    frame, String identifier, TagGroup &tags ) 
+  <DD> Gets the On/Off state of a labeled bevel button in a uiframe object; returns 
+    the button TagGroup in tags, and 1 if succeeded, 0 otherwise. 
+  <DD>&nbsp; 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGBevelButtonOn</STRONG>( TagGroup 
+    button_tags, number isOn ) 
+  <DD> Sets the On/Off state of a button; returns the button TagGroup. 
+  <DD>&nbsp; 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGBevelButtonOn</STRONG>( object frame, 
+    string identifier, number isOn ) 
+  <DD> Sets the On/Off state of a labeled button in a uiframe object; returns 
+    the button TagGroup. 
+  <DD>&nbsp; 
+</DL>
+<P><STRONG>  ----------------- GROUP FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateGroup</STRONG>()
+<DD>	 Creates a group container
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateGroup</STRONG>( TagGroup &items )
+<DD>	 Creates a group container; passes back an empty items list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGGroupItems</STRONG>( TagGroup item1, TagGroup item2 )
+<DD>	 Creates a group containing the given two items; returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGGroupItems</STRONG>( TagGroup item1, TagGroup item2, TagGroup item3 )
+<DD>	 Creates a group containing the given three items; returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGGroupItems</STRONG>( TagGroup item1, TagGroup item2, TagGroup item3, TagGroup item4 )
+<DD>	 Creates a group containing the given four items; returns the container.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ----------------- FIELD FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateRealField</STRONG>( number value )
+<DD>	 Creates a real-valued field with the given initial value, field width, and format.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateRealField</STRONG>( number value, number width, number format )
+<DD>	 Creates a real-valued field with the given initial value, field width, and format.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateRealField</STRONG>( number value, number width, number format, string changedmethod )
+<DD>	 Creates a real-valued field with the given initial value, field width, format, and changed method.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateIntegerField</STRONG>( number value )
+<DD>	 Creates a integer-valued field with the given initial value, and field width.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateIntegerField</STRONG>( number value, number width )
+<DD>	 Creates a integer-valued field with the given initial value, and field width.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateIntegerField</STRONG>( number value, number width, string changedmethod )
+<DD>	 Creates a integer-valued field with the given initial value, field width, and changed method.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateStringField</STRONG>( String value )
+<DD>	 Creates a string-valued field with the given initial value, and field width.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateStringField</STRONG>( String value, number width )
+<DD>	 Creates a string-valued field with the given initial value, and field width.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateStringField</STRONG>( String value, number width, string changedmethod )
+<DD>	 Creates a string-valued field with the given initial value, field width, and changed method.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ----------------- CHECKBOX FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL> 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGCreateCheckBox</STRONG>( string 
+    title ) 
+  <DD> Creates a checkbox with the given text. 
+  <DD>&nbsp; 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGCreateCheckBox</STRONG>( string 
+    title, number state ) 
+  <DD> Creates a checkbox with the given text and initial checked/unchecked state 
+  <DD>&nbsp; 
+  <DT>TagGroup <STRONG style="COLOR: blue">DLGCreateCheckBox</STRONG>( string 
+    title, number state, string changedmethod ) 
+  <DD> Creates a checkbox with the given text, initial checked/unchecked state, 
+    and changed method. 
+  <dt> 
+  <dd> =&gt; &quot;changedmethod&quot; has to be defined in the <i>class</i> and 
+    be of syntax: <font color="#660000">void changedmethod(<b>object</b> <i>self</i>, 
+    <b>taggroup</b> tg)</font>
+  <dt>&nbsp;</dt>
+  <DD>&nbsp; 
+</DL>
+<P><STRONG>  ----------------- BOX FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateBox</STRONG>()
+<DD>	 Creates a box container
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateBox</STRONG>( String title)
+<DD>	 Creates a box with the given title
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateBox</STRONG>( TagGroup &items )
+<DD>	 Creates a box container; passes back an empty items list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateBox</STRONG>( String title, TagGroup &items )
+<DD>	 Creates a box with the given title; passes back an empty items list, and returns the container.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ----------------- RADIO BUTTON FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateRadioList</STRONG>( )
+<DD>	 Creates a radio button list container
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateRadioList</STRONG>( number value )
+<DD>	 Creates a radio button list container with the given initial value
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateRadioList</STRONG>( number value, string changedmethod )
+<DD>	 Creates a radio button list container with the given initial value and changed method;
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateRadioList</STRONG>( TagGroup &items )
+<DD>	 Creates a radio button list container; passes back an empty items list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateRadioList</STRONG>( TagGroup &items, number value )
+<DD>	 Creates a radio button list container with the given initial value; passes back an empty items list, 
+	 and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateRadioList</STRONG>( TagGroup &items, number value, string changedmethod )
+<DD>	 Creates a radio button list container with the given initial value and changed method;
+	 passes back an empty items list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateRadioItem</STRONG>( string label, number value )
+<DD>	 Createsa radio button item with the given title and value
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddRadioItem</STRONG>( TagGroup rad_container, string label, number value )
+<DD>	 Creates and adds a radio button item with the given title and value to a radio button list; 
+	 returns the radio button item.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ----------------- LIST FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateList</STRONG>( number width, number height )
+<DD>	 Creates a list container with the given width and height
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateList</STRONG>( string changedmethod, number width, number height )
+<DD>	 Creates a list container with the given width, height, and changed method;
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateList</STRONG>( string changedmethod, string actionmethod, number width, number height )
+<DD>	 Creates a list container with the given width, height, changed method and action method;
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateList</STRONG>( TagGroup &items, number width, number height )
+<DD>	 Creates a list container with the given width and height; passes back an empty items list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateList</STRONG>( TagGroup &items,  string changedmethod, number width, number height )
+<DD>	 Creates a list container with the given width, height, and changed method;
+	 passes back an empty items list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateList</STRONG>( TagGroup &items, string changedmethod, string actionmethod, number width, number height )
+<DD>	 Creates a list container with the given width, height, changed method and action method;
+	 passes back an empty items list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateListItem</STRONG>( string label, number selected )
+<DD>	 Creates a list item with the given label.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddListItem</STRONG>( TagGroup item_container, string label, number selected )
+<DD>	 Adds a list item with the given label to a list.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ----------------- POPUP MENU FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePopup</STRONG>( )
+<DD>	 Creates a popup menu
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePopup</STRONG>( number value )
+<DD>	 Creates a popup menu with the given initial value
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePopup</STRONG>( number value, string changedmethod )
+<DD>	 Creates a popup menu with the given initial value and changed method
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePopup</STRONG>( TagGroup &items )
+<DD>	 Creates a popup menu; passes back an empty items list, and returns the container..
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePopup</STRONG>( TagGroup &items, number value )
+<DD>	 Creates a popup menu with the given initial valuepasses back an empty items list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePopup</STRONG>( TagGroup &items, number value, string changedmethod )
+<DD>	 Creates a popup menu with the given initial value and changed method; passes back an empty items list, 
+	 and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePopup</STRONG>( string title, TagGroup &label_item, TagGroup &popup_item, TagGroup &choice_items, number value )
+<DD>	 Creates a named popup menu group with the given title and initial value; passes back the label 
+	 for the popup title, the popup menu, and an empty popup items list; returns the named popup group.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateBoxedPopup</STRONG>( string boxTitle, TagGroup &popup_item, TagGroup &choice_items, number value )
+<DD>	 Creates a named box containing a popup menu with the given title and initial value; 
+	 passes back the popup menu and an empty popup items list; returns the box element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePopupItemEntry</STRONG>( string label )
+<DD>	 Creates a popup entry with the given label.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddPopupItemEntry</STRONG>( TagGroup container, string label )
+<DD>	 Adds a popup entry with the given label to a list of popup items; returns the popup entry.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ----------------- CHOICE ITEM FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateChoice</STRONG>( )
+<DD>	 Creates a choice item
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateChoice</STRONG>( number value )
+<DD>	 Creates a choice item with the given initial value
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateChoice</STRONG>( number value, string changedmethod )
+<DD>	 Creates a choice item with the given initial value and changed method
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateChoice</STRONG>( TagGroup &items )
+<DD>	 Creates a choice item; passes back an empty items list, and returns the container..
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateChoice</STRONG>( TagGroup &items, number value )
+<DD>	 Creates a choice item with the given initial valuepasses back an empty items list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateChoice</STRONG>( TagGroup &items, number value, string changedmethod )
+<DD>	 Creates a choice item with the given initial value and changed method; passes back an empty items list, 
+	 and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateChoice</STRONG>( string title, TagGroup &label_item, TagGroup &choice_item, TagGroup &choice_items, number value )
+<DD>	 Creates a named choice item group with the given title and initial value; passes back the label 
+	 for the choice title, the choice item, and an empty choice items list; returns the named choice group.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateBoxedChoice</STRONG>( string boxTitle, TagGroup &choice_item, TagGroup &choice_items, number value )
+<DD>	 Creates a named box containing a choice item with the given title and initial value; 
+	 passes back the choice item and an empty choice items list; returns the box element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateChoiceItemEntry</STRONG>( string label )
+<DD>	 Creates a choice entry with the given label
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddChoiceItemEntry</STRONG>( TagGroup container, string label )
+<DD>	 Adds a choice entry with the given label to a list of choice items; returns the choice entry.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  -------------------- PANEL FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePanelList</STRONG>( )
+<DD>	 Creates a panel list container
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePanelList</STRONG>( number value )
+<DD>	 Creates a panel list container with the given initially selected panel index; 
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePanelList</STRONG>( TagGroup &items )
+<DD>	 Creates a panel list container; passes back an empty panel list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePanelList</STRONG>( TagGroup &items, number value )
+<DD>	 Creates a panel list container with the given initially selected panel index; 
+	 passes back an empty panel list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePanel</STRONG>( )
+<DD>	 Creates a panel element
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreatePanel</STRONG>( TagGroup &items )
+<DD>	 Creates a panel element; passes back an empty items list, and returns the element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddPanel</STRONG>( TagGroup container, TagGroup panel )
+<DD>	 Adds a panel element to a panel list; returns the panel element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddPanel</STRONG>( TagGroup container)
+<DD>	 Creates and adds a panel element to a panel list; returns an empty items list for the new panel.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ------------------------- TAB FUNCTIONS ---------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateTabList</STRONG>( )
+<DD>	 Creates a tab list container
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateTabList</STRONG>( number value )
+<DD>	 Creates a tab list container with the given initially selected tab index
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateTabList</STRONG>( number value, string changedmethod )
+<DD>	 Creates a tab list container with the given initially selected tab index and changed method
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateTabList</STRONG>( TagGroup &items )
+<DD>	 Creates a tab list container; passes back an empty tab list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateTabList</STRONG>( TagGroup &items, number value )
+<DD>	 Creates a tab list container with the given initially selected tab index; passes back an empty tab list,
+	 and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateTabList</STRONG>( TagGroup &items, number value, string changedmethod )
+<DD>	 Creates a tab list container with the given initially selected tab index and changed method; passes back
+	 an empty tab list, and returns the container.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateTab</STRONG>( string label )
+<DD>	 Creates a tab with the given label
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateTab</STRONG>( TagGroup &tab_items, string label )
+<DD>	 Creates a tab with the given label; passes back an empty panel items list and returns the tab element.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddTab</STRONG>( TagGroup container, string label )
+<DD>	 Creates and adds a tab with the given label to a tab list; returns an empty items list for the new tab.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddTab</STRONG>( TagGroup container, TagGroup tab )
+<DD>	 Adds a tab to a tab list; returns the tab element.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ------------------------------- TEXT BOX FUNCTIONS --------------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateTextBox</STRONG>( number width, number height, number length )
+<DD>	 Creates a text box with the given width, height, and text length.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ------------------------------- IMAGE POPUP FUNCTIONS --------------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateImagePopup</STRONG>()
+<DD>	 Creates a popup menu listing the currently open images.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateImagePopup</STRONG>( number image_id )
+<DD>	 Creates a popup menu listing the currently open images, with
+	 the name of the image with the given image ID initially selected.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ------------------------------- PROGRESS BAR FUNCTIONS --------------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateProgressBar</STRONG>( string identifier )
+<DD>	 Creates a progress bar.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGSetProgress</STRONG>( object frame, string identifier, number percentage_complete )
+<DD>	 Sets the progress status of a progress bar in a uiframe object;
+	 returns the TagGroup containing the identifier.
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGGetProgress</STRONG>( object frame, string identifier, number &percentage_complete )
+<DD>	 Gets the progress status of a progress bar in a uiframe object;
+	 returns the TagGroup containing the identifier.
+
+<DD>&nbsp;  
+</DL>
+<P><STRONG>  ------------------------------- GRAPHIC FUNCTIONS --------------------------------------
+ </STRONG></P>
+<DL>
+<DT>TagGroup <STRONG style="COLOR: blue">DLGCreateGraphic</STRONG>( number width, number height )
+<DD>	 Creates a graphic element with the given width and height
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddBitmap</STRONG>(TagGroup graphic, TagGroup bitmap_item )
+<DD>	 Adds a bitmap to a graphic element
+
+<DD>&nbsp;  
+<DT>TagGroup <STRONG style="COLOR: blue">DLGAddBitmap</STRONG>( TagGroup graphic, Image img )
+<DD>	 Creates a bitmap from the given image and adds it to the graphic element
+
+<DD>&nbsp;  
+</DL></BODY></HTML>
